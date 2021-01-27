@@ -31,7 +31,8 @@ Mallet 2.0 commands:
   prune              remove features based on frequency or information gain
   split              divide data into testing, training, and validation portions
   bulk-load          for big input files, efficiently prune vocabulary and import docs
-  list-instances     list the instances in an instance file
+  list-instances     list the instances in an instance list file
+  list-alphabet      list the data alphabet in an instance list file
 
 Include --help with any option for more information
 EOF
