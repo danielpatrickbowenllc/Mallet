@@ -31,6 +31,8 @@ Mallet 2.0 commands:
   prune              remove features based on frequency or information gain
   split              divide data into testing, training, and validation portions
   bulk-load          for big input files, efficiently prune vocabulary and import docs
+  list-instances     list the instances in an instance list file
+  list-alphabet      list the data alphabet in an instance list file
 
 Include --help with any option for more information
 EOF
@@ -53,6 +55,8 @@ case $CMD in
 	prune) CLASS=cc.mallet.classify.tui.Vectors2Vectors;;
 	split) CLASS=cc.mallet.classify.tui.Vectors2Vectors;;
 	bulk-load) CLASS=cc.mallet.util.BulkLoader;;
+	list-instances) CLASS=cc.mallet.util.InstanceListPrinter;;
+	list-alphabet) CLASS=cc.mallet.util.DataAlphabetPrinter;;
 	run) CLASS=$1; shift;;
 	*) echo "Unrecognized command: $CMD"; help; exit 1;;
 esac
